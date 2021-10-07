@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />	
-	<title>Ham Hill</title>
+	<title>West Bexington</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="  crossorigin=""></script>
@@ -444,6 +444,93 @@
     var somerset1900 = L.layerGroup([somersetholes, somerset],{
 		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
     });
+	var dorset1 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-1/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 11,
+		maxNativeZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset2 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-2/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 11,
+		maxNativeZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset3 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-3/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 11,
+		maxNativeZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset4 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-4/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 11,
+		maxNativeZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset5 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-5/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 11,
+		maxNativeZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset6 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-6/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 11,
+		maxNativeZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset7 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-7/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 1,
+		maxNativeZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset8 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-8/{z}/{x}/{y}.png', {
+		tms: true,
+		opacity: 0.5,
+		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
+		minZoom: 11,
+		maxNativeZoom: 18
+		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
+	});
+	var dorset1880 = L.layerGroup([dorset1, dorset2, dorset3, dorset4, dorset5, dorset6, dorset7, dorset8],{
+		attribution: '© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88'
+        });
+    var dorset = L.tileLayer('https://geo.nls.uk/mapdata2/os/25_inch/dorset/{z}/{x}/{y}.png', {
+		format: 'image/png',
+        transparent: true,
+        opacity: 0.5,
+        minZoom: 11,
+	    maxNativeZoom: 18,
+        bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])	
+	});
+	var dorsetholes = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch_holes_england/{z}/{x}/{y}.png', {
+		format: 'image/png',
+        transparent: true,
+        opacity: 0.5,
+        minZoom: 11,
+	    maxNativeZoom: 18,
+        bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])
+	//bounds: L.latLngBounds([[49.87532392, -6.39247979],[55.78194849, 1.74496421]])	
+	});
+    var dorset1900 = L.layerGroup([dorset, dorsetholes],{
+		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
+    });
     var somersettithe = L.tileLayer.wms('https://dorsetgeologistsassociation.org/tithe/arcgis/services/base/1840s_tithe_128dpi_mk4/MapServer/WmsServer?', {
         layers: '0',
         transparent: true,
@@ -465,7 +552,7 @@
         "color": "#770000",
         "weight": 2,
         "opacity": 0.5,
-	//"dashArray": "5 5",
+	  //"dashArray": "5 5",
         "fillOpacity": 0		
 	});
 	var faults = L.geoJSON(faultsUK,{
@@ -568,7 +655,7 @@
         }
     });
 	var map = L.map('map', {
-		center: [50.94640, -2.73444],
+		center: [50.67964, -2.66133],
 		minZoom: 4,
 		zoom: 16,
 		maxZoom: 19,
@@ -682,8 +769,8 @@
 		"<span title = 'OS Open Data Road'>OS Road</span>": road_overlay,
 		"<span title = 'Bing Maps OS Current'>OS Current</span>": os,
 		"<span title = 'OS 1:10,560 1950-1967'>OS 1950-1967</span>": os10k,
-		"<span title = 'OS Second Edition 25 inch ~1900'>OS 2nd Edition ~1900</span>": somerset1900,		
-		"<span title = 'OS First Edition 25 inch ~1880'>OS 1st Edition ~1880</span>": somerset1880,
+		"<span title = 'OS Second Edition 25 inch ~1900'>OS 2nd Edition ~1900</span>": dorset1900,		
+		"<span title = 'OS First Edition 25 inch ~1880'>OS 1st Edition ~1880</span>": dorset1880,
 		//"<span title = 'Tithe Maps ~1840'>Tithe Maps ~1840</span>": somersettithe,
 		"<span title = 'BGS Geology Bedrock'>Geology Bedrock</span>": geobed,
 		"<span title = 'BGS Geology Superficial'>Geology Surface</span>": geosup,
@@ -706,8 +793,8 @@
 		'opendataonly': opendataonly,
 		'osm': osm,
 		'osmbase': osmbase,
-	    'somerset1880': somerset1880,
-		'somerset1900': somerset1900,
+	    'dorset1880': dorset1880,
+		'dorset1900': dorset1900,
 		'os10k': os10k,
 		'aerialtransp': aerialtransp,
 		'geobed': geobed,
