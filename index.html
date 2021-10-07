@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
     <script src="SY68exogyraBeds.js"></script>
-    <script src="somersetParish.js"></script>
+    <script src="dorsetParish.js"></script>
     <script src="faultsUK.js"></script>
     <script src="dykesUK.js"></script>
     <link rel="stylesheet" href="https://labs.os.uk/public/os-api-branding/v0.2.0/os-api-branding.css" />
@@ -543,10 +543,10 @@
         identify: true,
         attribution: 'Tithe maps © <a target = "_blank" href="https://www.kypwest.org.uk/" title="Know Your Place">KYP</a>'
     });
-    var parish = L.geoJSON(somersetParish,{
+    var parish = L.geoJSON(dorsetParish,{
         onEachFeature: function(feature, layer) {
             layer.bindPopup(
-                feature.properties.Name
+                feature.properties.NAME
             );
         },		
         "color": "#770000",
