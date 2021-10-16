@@ -101,8 +101,15 @@
         maxNativeZoom: 17,
 	    maxZoom: 20
 	});
-    var road = L.tileLayer(serviceUrl + '/Road_3857/{z}/{x}/{y}.png?key=' + apiKey, { maxNativeZoom:16, maxZoom: 18 });
-    var road_overlay = L.tileLayer(serviceUrl + '/Road_3857/{z}/{x}/{y}.png?key=' + apiKey, { opacity:0.5, maxNativeZoom:16, maxZoom: 18 });
+        var road = L.tileLayer(serviceUrl + '/Road_3857/{z}/{x}/{y}.png?key=' + apiKey, {
+	    // maxNativeZoom:16,
+	    maxZoom: 20
+        });
+        var road_overlay = L.tileLayer(serviceUrl + '/Road_3857/{z}/{x}/{y}.png?key=' + apiKey, {
+	    opacity:0.5,
+	    //maxNativeZoom:16,
+	    maxZoom: 20
+	});
 	
     var bgs50bed = L.tileLayer.betterWms('https://map.bgs.ac.uk/arcgis/services/BGS_Detailed_Geology/MapServer/WMSServer', {
         layers: 'BGS.50k.Bedrock',
